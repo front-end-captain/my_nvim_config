@@ -3,6 +3,7 @@
 
 ## config overview
 
+```
 ├── README.md
 ├── init.lua
 ├── lua
@@ -15,6 +16,7 @@
 │   │   ├── setup.lua
 │   │   └── ui.lua
 │   ├── plugin-config
+```
 
 + init.lua: all config entry file, and require other config file
 + basic.lua: basic config and override some default config
