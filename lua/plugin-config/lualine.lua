@@ -1,10 +1,11 @@
 -- 如果找不到lualine 组件，就不继续执行
 local status, lualine = pcall(require, "lualine")
 if not status then
-  vim.notify("没有找到 lualine")
+  vim.notify("lualine not found")
   return
 end
 
+-- https://github.com/nvim-lualine/lualine.nvim
 lualine.setup({
   options = {
     theme = "auto",
@@ -16,14 +17,15 @@ lualine.setup({
   sections = {
     lualine_c = {
       "filename",
-    {
+      "location",
+      {
         "lsp_progress",
         spinner_symbols = { " ", " ", " ", " ", " ", " " },
       },
     },
     lualine_x = {
       "filesize",
-    {
+      {
         "fileformat",
         -- symbols = {
         --   unix = '', -- e712

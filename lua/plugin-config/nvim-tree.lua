@@ -5,41 +5,35 @@ if not status then
   return
 end
 
--- 列表操作快捷键
+-- kep map for nvim-tree
 local list_keys = require('keybindings').nvimTreeList
 
+-- https://github.com/kyazdani42/nvim-tree.lua
 nvim_tree.setup({
-  -- 不显示 git 状态图标
   git = {
-    enable = false,
+    enable = true,
+    ignore = false,
   },
-  -- project plugin 需要这样设置
   update_cwd = true,
   update_focused_file = {
     enable = true,
     update_cwd = true,
   },
-  -- 隐藏 .文件 和 node_modules 文件夹
+  -- which dir will hide
   filters = {
     dotfiles = false,
     custom = { ".idea" },
   },
   view = {
-    -- 宽度
     width = 50,
-    -- 也可以 'right'
     side = "right",
-    -- 隐藏根目录
     hide_root_folder = false,
-    -- 自定义列表中快捷键
     mappings = {
       custom_only = false,
       list = list_keys,
     },
-    -- 不显示行数
-    number = false,
-    relativenumber = false,
-    -- 显示图标
+    number = true,
+    relativenumber = true,
     signcolumn = "yes",
   },
   actions = {

@@ -5,16 +5,13 @@ if not status then
   return
 end
 
+-- https://github.com/nvim-treesitter/nvim-treesitter
 nvim_treesitter.setup({
-  -- 安装 language parser
-  -- :TSInstallInfo 命令查看支持的语言
-  ensure_installed = {"html", "css", "vim", "lua", "javascript", "typescript", "tsx"},
-  -- 启用代码高亮功能
+  ensure_installed = { "html", "css", "vim", "lua", "javascript", "typescript", "tsx" },
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false
   },
-  -- 启用增量选择
   incremental_selection = {
     enable = true,
     keymaps = {
@@ -24,7 +21,8 @@ nvim_treesitter.setup({
       scope_incremental = '<TAB>',
     }
   },
-  -- 启用基于Treesitter的代码格式化(=) . NOTE: This is an experimental feature.
+  -- enable Treesitter code format(=)
+  -- NOTE: This is an experimental feature.
   indent = {
     enable = true
   }

@@ -2,61 +2,94 @@ local packer = require("packer")
 
 packer.startup({
   function(use)
-    -- Packer 可以管理自己本身
-    use "wbthomason/packer.nvim"
-    -- 插件列表...
+    -- Packer can manage self
+    use("wbthomason/packer.nvim")
+
+    -- color theme
+    -- tokyonight
+    use("folke/tokyonight.nvim")
+    -- OceanicNext
+    use("mhartington/oceanic-next")
+    -- gruvbox
+    use({ "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } })
+    -- nord
+    use("shaunsingh/nord.nvim")
+    -- onedark
+    use("ful1e5/onedark.nvim")
+    -- nightfox
+    use("EdenEast/nightfox.nvim")
+
+    -- file explorer
     use({
       "kyazdani42/nvim-tree.lua",
-      requires = "kyazdani42/nvim-web-devicons"
+      requires = "kyazdani42/nvim-web-devicons",
     })
+
+    -- buffer line(with tabpage integration)
     use({
       "akinsho/bufferline.nvim",
       tag = "*",
-      requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }
+      requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" },
     })
+
+    -- statusline
     use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
-    use("arkav/lualine-lsp-progress")
+
+    -- finder
     use({
       "nvim-telescope/telescope.nvim",
-      commit = "b70256066ef95ace1e76af1556a76a045e12a306",
-      requires = { "nvim-lua/plenary.nvim" }
+      requires = { "nvim-lua/plenary.nvim" },
     })
     use("LinArcX/telescope-env.nvim")
-    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+
+    -- welcome screen
     use("glepnir/dashboard-nvim")
     use("ahmedkhalf/project.nvim")
+
+    use("arkav/lualine-lsp-progress")
+
+    -- syntax highlight
+    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+
+    -- git integration for buffers
     use({
       "lewis6991/gitsigns.nvim",
       requires = {
-        "nvim-lua/plenary.nvim"
+        "nvim-lua/plenary.nvim",
       },
-      tag = "release"
+      tag = "release",
     })
+
     -- lspconfig
-    use({ "neovim/nvim-lspconfig" })
     use({ "williamboman/nvim-lsp-installer" })
-    -- 补全引擎
+    use({ "neovim/nvim-lspconfig" })
+    use("onsails/lspkind-nvim")
+
+    -- code completion
     use("hrsh7th/nvim-cmp")
-    -- snippet 引擎
+    -- snippet completion
     use("hrsh7th/vim-vsnip")
-    -- 补全源
+    use("rafamadriz/friendly-snippets")
+    -- completion source
     use("hrsh7th/cmp-vsnip")
     use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
     use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
     use("hrsh7th/cmp-path") -- { name = 'path' }
     use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
 
-    -- 常见编程语言代码段
-    use("rafamadriz/friendly-snippets")
-
-    use("onsails/lspkind-nvim")
-
     -- indent-blankline
     use("lukas-reineke/indent-blankline.nvim")
 
-    -- 代码格式化
-    -- use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
+    -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+    use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
+
+    -- code comment
     use("numToStr/Comment.nvim")
+
+    -- access to the schemastore
+    use("b0o/schemastore.nvim")
+
+    use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
   end,
 
   config = {
@@ -74,5 +107,5 @@ packer.startup({
         return require("packer.util").float({ border = "single" })
       end,
     },
-  }
+  },
 })
