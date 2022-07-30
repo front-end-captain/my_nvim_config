@@ -18,6 +18,9 @@ packer.startup({
     use("ful1e5/onedark.nvim")
     -- nightfox
     use("EdenEast/nightfox.nvim")
+    -- use("Mofiqul/vscode.nvim")
+    -- use("sainnhe/edge")
+    use({ "rafamadriz/neon", branch = "main" })
 
     -- file explorer
     use({

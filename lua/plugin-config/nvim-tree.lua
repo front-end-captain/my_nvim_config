@@ -6,7 +6,7 @@ if not status then
 end
 
 -- kep map for nvim-tree
-local list_keys = require('keybindings').nvimTreeList
+local list_keys = require("keybindings").nvimTreeList
 
 -- https://github.com/kyazdani42/nvim-tree.lua
 nvim_tree.setup({
@@ -14,7 +14,7 @@ nvim_tree.setup({
     enable = true,
     ignore = false,
   },
-  update_cwd = true,
+  update_cwd = false,
   update_focused_file = {
     enable = true,
     update_cwd = true,
@@ -48,11 +48,11 @@ nvim_tree.setup({
         enable = true,
         chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
         exclude = {
-          filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame", },
-          buftype  = { "nofile", "terminal", "help", },
-        }
-      }
-    }
+          filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame" },
+          buftype = { "nofile", "terminal", "help" },
+        },
+      },
+    },
   },
   -- npm install -g wsl-open
   -- https://github.com/4U6U57/wsl-open/

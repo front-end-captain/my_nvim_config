@@ -11,7 +11,7 @@ local code_actions = null_ls.builtins.code_actions
 
 -- https://github.com/jose-elias-alvarez/null-ls.nvim
 null_ls.setup({
-  debug = false,
+  debug = true,
   sources = {
     -- Formatting ---------------------
     --  brew install shfmt

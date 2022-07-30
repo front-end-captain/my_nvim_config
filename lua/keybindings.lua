@@ -86,6 +86,7 @@ map("n", "<leader>k", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<leader>j", ":BufferLineCycleNext<CR>", opt)
 -- colose current active tab
 map("n", "<C-w>", ":Bdelete!<CR>", opt)
+map("n", "<leader>q", ":Bdelete!<CR>", opt)
 map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
 map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
