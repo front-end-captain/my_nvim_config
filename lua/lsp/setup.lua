@@ -11,6 +11,8 @@ local servers = {
   emmet_ls = require("lsp.config.emmet"),
   jsonls = require("lsp.config.json"),
   tsserver = require("lsp.config.ts"),
+  clangd = require("lsp.config.clang"),
+  eslint = require("lsp.config.eslint"),
 }
 -- auto install Language Servers
 for name, _ in pairs(servers) do
