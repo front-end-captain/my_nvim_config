@@ -10,7 +10,7 @@ telescope.setup({
 	defaults = {
 		initial_mode = "insert",
 		mappings = require("keybindings").telescopeList,
-		file_ignore_patterns = { "node_modules", "*.png", "*.jpeg", "*.jpg" },
+		file_ignore_patterns = { "node_modules", "*.png", "*.jpeg", "*.jpg", "common/temp", "dist" },
 	},
 	-- pickers = {
 	-- find_files = {
