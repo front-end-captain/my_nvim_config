@@ -22,7 +22,8 @@ end
 -- if you want to set up formatting on save, you can use this as a callback
 -- local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
--- https://github.com/jose-elias-alvarez/null-ls.nvim
+-- https://github.com/jose-elias-alvarez/null-ls.nviml
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/CONFIG.md
 null_ls.setup({
 	debug = true,
 	sources = {
@@ -50,7 +51,22 @@ null_ls.setup({
 			prefer_local = "node_modules/.bin",
 		}),
 		-- npm i --location=global cspell http://cspell.org/
-		null_ls.builtins.diagnostics.cspell,
+		null_ls.builtins.diagnostics.cspell.with({
+			-- log_level = "info",
+			diagnostic_config = {
+				-- see :help vim.diagnostic.config()
+				underline = false,
+				virtual_text = true,
+				signs = true,
+				update_in_insert = true,
+				severity_sort = false,
+			},
+			-- fallback_severity = vim.diagnostic.severity["HINT"],
+			diagnostics_format = "[spell][#{m}",
+			diagnostics_postprocess = function(diagnostic)
+				diagnostic.severity = vim.diagnostic.severity["HINT"]
+			end,
+		}),
 		null_ls.builtins.code_actions.cspell,
 		-- code actions ---------------------
 		code_actions.gitsigns,

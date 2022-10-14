@@ -6,7 +6,6 @@ packer.startup({
 		use("wbthomason/packer.nvim")
 
 		-- color theme
-		-- tokyonight use("folke/tokyonight.nvim")
 		-- OceanicNext
 		use("mhartington/oceanic-next")
 		-- gruvbox
@@ -17,11 +16,6 @@ packer.startup({
 		use("ful1e5/onedark.nvim")
 		-- nightfox
 		use("EdenEast/nightfox.nvim")
-		-- use("Mofiqul/vscode.nvim")
-		-- use("sainnhe/edge")
-		use({ "rafamadriz/neon", branch = "main" })
-		use("sainnhe/edge")
-		use("Mofiqul/adwaita.nvim")
 		-- Remove all background colors to make nvim transparent
 		use("xiyaowong/nvim-transparent")
 
@@ -91,6 +85,8 @@ packer.startup({
 
 		-- code comment
 		use("numToStr/Comment.nvim")
+		-- better tsx/jsx comment
+		use("JoosepAlviste/nvim-ts-context-commentstring")
 
 		-- access to the schemastore
 		use("b0o/schemastore.nvim")
