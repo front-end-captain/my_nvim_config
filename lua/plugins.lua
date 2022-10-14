@@ -6,8 +6,7 @@ packer.startup({
 		use("wbthomason/packer.nvim")
 
 		-- color theme
-		-- tokyonight
-		use("folke/tokyonight.nvim")
+		-- tokyonight use("folke/tokyonight.nvim")
 		-- OceanicNext
 		use("mhartington/oceanic-next")
 		-- gruvbox
@@ -105,6 +104,11 @@ packer.startup({
 		use("stevearc/dressing.nvim")
 		-- fix working dir root
 		use("notjedi/nvim-rooter.lua")
+		-- todo comment highlight. brew install ripgrep https://github.com/BurntSushi/ripgrep#installation
+		use({
+			"folke/todo-comments.nvim",
+			requires = "nvim-lua/plenary.nvim",
+		})
 	end,
 
 	config = {

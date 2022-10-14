@@ -49,22 +49,17 @@ null_ls.setup({
 			},
 			prefer_local = "node_modules/.bin",
 		}),
-		-- Diagnostics  ---------------------
-		-- diagnostics.eslint.with({
-		-- prefer_local = "node_modules/.bin",
-		-- }),
+		-- npm i --location=global cspell http://cspell.org/
+		null_ls.builtins.diagnostics.cspell,
+		null_ls.builtins.code_actions.cspell,
 		-- code actions ---------------------
 		code_actions.gitsigns,
-		-- code_actions.eslint.with({
-		-- prefer_local = "node_modules/.bin",
-		-- }),
 		-- formatting.fixjson,
 		-- formatting.black.with({ extra_args = { "--fast" } }),
 	},
 	-- #{m}: message
 	-- #{s}: source name (defaults to null-ls if not specified)
 	-- #{c}: code (if available)
-	-- 提示格式： [eslint] xxx
 	diagnostics_format = "[#{s}] #{m}",
 	-- auto formatting on save
 	on_attach = function(client, bufnr)
