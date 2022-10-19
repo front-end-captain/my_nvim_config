@@ -14,10 +14,10 @@ nvim_tree.setup({
 		enable = true,
 		ignore = false,
 	},
-	update_cwd = false,
+	update_cwd = true,
 	update_focused_file = {
 		enable = true,
-		update_cwd = false,
+		update_cwd = true,
 	},
 	-- which dir will hide
 	filters = {

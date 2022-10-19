@@ -56,7 +56,7 @@ null_ls.setup({
 			diagnostic_config = {
 				-- see :help vim.diagnostic.config()
 				underline = false,
-				virtual_text = true,
+				virtual_text = false,
 				signs = true,
 				update_in_insert = true,
 				severity_sort = false,
