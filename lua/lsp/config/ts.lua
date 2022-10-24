@@ -2,6 +2,9 @@ local keybindings = require("keybindings")
 -- local ts_utils = require("nvim-lsp-ts-utils")
 
 local opts = {
+	settings = {
+		maxTsServerMemory = 10240,
+	},
 	flags = {
 		debounce_text_changes = 150,
 	},
