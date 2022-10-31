@@ -30,5 +30,11 @@ bufferline.setup({
 		end,
 		show_buffer_close_icons = false,
 		show_close_icon = false,
+		-- 'slant' | 'padded_slant' | 'thick' | 'thin'
+		separator_style = "thick",
+		indicator = {
+			-- icon = "▎", -- this should be omitted if indicator style is not 'icon'
+			style = "underline",
+		},
 	},
 })

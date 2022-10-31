@@ -109,8 +109,8 @@ vim.opt.termguicolors = true
 vim.o.list = true
 vim.o.listchars = "space:·,tab:.."
 
--- 补全增强
-vim.o.wildmenu = true
+-- disable wild menu
+vim.o.wildmenu = false
 
 -- Dont' pass messages to |ins-completin menu|
 vim.o.shortmess = vim.o.shortmess .. "c"

@@ -14,10 +14,10 @@ map("n", "<leader>sc", "<C-w>c", opt)
 map("n", "<leader>so", "<C-w>o", opt)
 
 -- Alt + hjkl jump between windows
-map("n", "<A-h>", "<C-w>h", opt)
-map("n", "<A-j>", "<C-w>j", opt)
-map("n", "<A-k>", "<C-w>k", opt)
-map("n", "<A-l>", "<C-w>l", opt)
+map("n", "<A-H>", "<C-w>h", opt)
+map("n", "<A-J>", "<C-w>j", opt)
+map("n", "<A-K>", "<C-w>k", opt)
+map("n", "<A-L>", "<C-w>l", opt)
 
 map("n", "<C-Left>", ":vertical resize -2<CR>", opt)
 map("n", "<C-Right>", ":vertical resize +2<CR>", opt)
