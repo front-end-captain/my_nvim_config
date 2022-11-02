@@ -13,6 +13,7 @@ local servers = {
   tsserver = require("lsp.config.ts"),
   clangd = require("lsp.config.clang"),
   eslint = require("lsp.config.eslint"),
+  gopls = require("lsp.config.golang"),
 }
 -- auto install Language Servers
 for name, _ in pairs(servers) do
