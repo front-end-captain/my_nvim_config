@@ -3,6 +3,8 @@ local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
+local navic = require("nvim-navic");
+
 local opts = {
 	settings = {
 		Lua = {
@@ -33,6 +35,10 @@ local opts = {
 	on_attach = function(client, bufnr)
 		client.server_capabilities.document_formatting = false
 		client.server_capabilities.document_range_formatting = false
+
+    if client.server_capabilities.documentSymbolProvider then
+        navic.attach(client, bufnr)
+    end
 
 		local function buf_set_keymap(...)
 			vim.api.nvim_buf_set_keymap(bufnr, ...)

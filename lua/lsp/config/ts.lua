@@ -1,5 +1,6 @@
 local keybindings = require("keybindings")
 -- local ts_utils = require("nvim-lsp-ts-utils")
+local navic = require("nvim-navic");
 
 local opts = {
 	settings = {
@@ -12,6 +13,10 @@ local opts = {
 	on_attach = function(client, bufnr)
 		client.server_capabilities.document_formatting = false
 		client.server_capabilities.document_range_formatting = false
+
+    if client.server_capabilities.documentSymbolProvider then
+        navic.attach(client, bufnr)
+    end
 
 		local function buf_set_keymap(...)
 			vim.api.nvim_buf_set_keymap(bufnr, ...)

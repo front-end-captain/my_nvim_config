@@ -1,9 +1,10 @@
--- 如果找不到lualine 组件，就不继续执行
 local status, lualine = pcall(require, "lualine")
 if not status then
   vim.notify("lualine not found")
   return
 end
+
+local navic = require("nvim-navic")
 
 -- https://github.com/nvim-lualine/lualine.nvim
 lualine.setup({
@@ -26,6 +27,7 @@ lualine.setup({
         "lsp_progress",
         spinner_symbols = { " ", " ", " ", " ", " ", " " },
       },
+      { navic.get_location, cond = navic.is_available },
     },
     lualine_x = {
       "filesize",
