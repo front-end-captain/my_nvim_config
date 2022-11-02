@@ -111,6 +111,8 @@ packer.startup({
 
     -- wild menu
     use("gelguy/wilder.nvim")
+    -- surround selections
+    use("kylechui/nvim-surround")
 	end,
 
 	config = {
