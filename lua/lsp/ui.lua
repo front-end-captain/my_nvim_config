@@ -1,5 +1,7 @@
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_text = {
+    prefix = "●",
+  },
   signs = true,
   update_in_insert = true,
 })
@@ -22,13 +24,13 @@ lspkind.init({
   -- defines how annotations are shown
   -- default: symbol
   -- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
-  mode = 'symbol_text',
+  mode = "symbol_text",
   -- default symbol map
   -- can be either 'default' (requires nerd-fonts font) or
   -- 'codicons' for codicon preset (requires vscode-codicons font)
   --
   -- default: 'default'
-  preset = 'codicons',
+  preset = "codicons",
   -- override preset symbols
   --
   -- default: {}
@@ -57,14 +59,14 @@ lspkind.init({
     Struct = "פּ",
     Event = "",
     Operator = "",
-    TypeParameter = ""
+    TypeParameter = "",
   },
 })
 
 local M = {}
 M.formatting = {
   format = lspkind.cmp_format({
-    mode = 'symbol_text',
+    mode = "symbol_text",
     --mode = 'symbol', -- show only symbol annotations
 
     maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
@@ -73,8 +75,8 @@ M.formatting = {
     before = function(entry, vim_item)
       vim_item.menu = "[" .. string.upper(entry.source.name) .. "]"
       return vim_item
-    end
-  })
+    end,
+  }),
 }
 
 return M

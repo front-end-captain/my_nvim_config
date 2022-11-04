@@ -69,6 +69,7 @@ packer.startup({
       "SmiteshP/nvim-navic",
       requires = "neovim/nvim-lspconfig",
     })
+    use("ray-x/lsp_signature.nvim")
 
     -- code completion
     use("hrsh7th/nvim-cmp")
@@ -95,8 +96,6 @@ packer.startup({
 
     -- access to the schemastore
     use("b0o/schemastore.nvim")
-
-    use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
 
     -- Preview markdown
     use("ellisonleao/glow.nvim")
