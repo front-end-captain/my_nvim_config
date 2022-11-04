@@ -5,6 +5,8 @@ packer.startup({
     -- Packer can manage self
     use("wbthomason/packer.nvim")
 
+    use("rcarriga/nvim-notify")
+
     -- color theme
     -- OceanicNext
     use("mhartington/oceanic-next")
