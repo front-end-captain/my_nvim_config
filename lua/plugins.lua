@@ -8,16 +8,12 @@ packer.startup({
     use("rcarriga/nvim-notify")
 
     -- color theme
-    -- OceanicNext
-    use("mhartington/oceanic-next")
     -- gruvbox
     use({ "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } })
-    -- nord
-    use("shaunsingh/nord.nvim")
-    -- onedark
-    use("ful1e5/onedark.nvim")
-    -- nightfox
-    use("EdenEast/nightfox.nvim")
+    use({
+      "mcchrish/zenbones.nvim",
+      requires = "rktjmp/lush.nvim",
+    })
     -- Remove all background colors to make nvim transparent
     use("xiyaowong/nvim-transparent")
 

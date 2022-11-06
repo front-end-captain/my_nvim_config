@@ -65,6 +65,11 @@ notify.setup({
   },
 })
 
+vim.cmd([[
+  highlight NotifyINFOTitle guifg=#79b949
+  highlight NotifyINFOIcon guifg=#79b949
+]])
+
 local client_notifs = {}
 
 local function get_notif_data(client_id, token)
