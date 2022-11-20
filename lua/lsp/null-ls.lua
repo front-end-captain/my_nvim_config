@@ -66,7 +66,8 @@ null_ls.setup({
 				diagnostic.severity = vim.diagnostic.severity["HINT"]
 			end,
 		}),
-		null_ls.builtins.code_actions.cspell,
+		code_actions.eslint,
+		code_actions.cspell,
 		-- code actions ---------------------
 		code_actions.gitsigns,
 		-- formatting.fixjson,
@@ -75,7 +76,7 @@ null_ls.setup({
 	-- #{m}: message
 	-- #{s}: source name (defaults to null-ls if not specified)
 	-- #{c}: code (if available)
-	diagnostics_format = "[#{s}] #{m}",
+	diagnostics_format = "[#{s}] #{m}]",
 	-- auto formatting on save
 	-- on_attach = function(client, bufnr)
 	-- 	if client.supports_method("textDocument/formatting") then

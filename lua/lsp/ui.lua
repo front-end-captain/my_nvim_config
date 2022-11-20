@@ -1,14 +1,27 @@
+local signs = {
+  { name = "DiagnosticSignError", text = " " },
+  { name = "DiagnosticSignWarn", text = " " },
+  { name = "DiagnosticSignHint", text = " " },
+  { name = "DiagnosticSignInfo", text = " " },
+}
 vim.diagnostic.config({
-  virtual_text = {
-    prefix = "●",
-  },
-  signs = true,
+  virtual_text = false,
+  signs = { active = signs },
   update_in_insert = true,
+  underline = { severity_sort = true },
+  severity_sort = true,
+  float = {
+    focusable = false,
+    style = "minimal",
+    border = "rounded",
+    source = "always",
+    header = "",
+    prefix = "",
+  },
 })
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+
+for _, sign in ipairs(signs) do
+  vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
 end
 
 -- https://github.com/onsails/lspkind.nvim

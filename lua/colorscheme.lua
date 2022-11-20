@@ -1,8 +1,8 @@
 local colorscheme = "gruvbox"
 -- local colorscheme = "zenbones"
 
-vim.o.background = "light" -- or dark or light
--- vim.o.background = "dark" -- or dark or light
+-- vim.o.background = "light" -- or dark or light
+vim.o.background = "dark" -- or dark or light
 vim.o.termguicolors = true
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)

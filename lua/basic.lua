@@ -41,7 +41,7 @@ vim.bo.shiftwidth = 2
 vim.o.expandtab = true
 vim.bo.expandtab = true
 
--- -- 新行对齐当前行
+-- 新行对齐当前行
 vim.o.autoindent = true
 vim.bo.autoindent = true
 vim.o.smartindent = true

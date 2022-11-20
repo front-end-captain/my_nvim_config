@@ -1,5 +1,7 @@
 local lsp_installer = require("nvim-lsp-installer")
 
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+
 -- installed language server table
 -- { key: <language>, value: <config file name> }
 -- key must be follow website listed name
@@ -14,6 +16,7 @@ local servers = {
   clangd = require("lsp.config.clang"),
   eslint = require("lsp.config.eslint"),
   gopls = require("lsp.config.golang"),
+  pyright = require("lsp.config.python"),
 }
 -- auto install Language Servers
 for name, _ in pairs(servers) do

@@ -18,7 +18,8 @@ local opts = {
     local function buf_set_keymap(...)
       vim.api.nvim_buf_set_keymap(bufnr, ...)
     end
-keybindings.mapLSP(buf_set_keymap)
+
+    keybindings.mapLSP(buf_set_keymap)
 
     lsp_signature.on_attach({
       bind = true,
