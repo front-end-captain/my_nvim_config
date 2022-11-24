@@ -10,10 +10,6 @@ packer.startup({
 		-- color theme
 		-- gruvbox
 		use({ "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } })
-		use({
-			"mcchrish/zenbones.nvim",
-			requires = "rktjmp/lush.nvim",
-		})
 		-- Remove all background colors to make nvim transparent
 		use("xiyaowong/nvim-transparent")
 

@@ -8,7 +8,7 @@ end
 illuminate.configure({
   -- providers: provider used to get references in the buffer, ordered by priority
   providers = {
-    "lsp",
+    -- "lsp",
     "treesitter",
   },
 
@@ -66,6 +66,6 @@ illuminate.configure({
   -- min_count_to_highlight = 1,
 })
 
-vim.cmd([[hi def IlluminatedWordText guibg=#3b4252]])
-vim.cmd([[hi def IlluminatedWordRead guibg=#3b4252]])
-vim.cmd([[hi def IlluminatedWordWrite guibg=#3b4252]])
+vim.cmd([[hi def IlluminatedWordText cterm=bold gui=bold]])
+vim.cmd([[hi def IlluminatedWordRead cterm=bold gui=bold]])
+vim.cmd([[hi def IlluminatedWordWrite cterm=bold gui=bold]])

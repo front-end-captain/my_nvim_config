@@ -1,5 +1,4 @@
 local colorscheme = "gruvbox"
--- local colorscheme = "zenbones"
 
 -- vim.o.background = "light" -- or dark or light
 vim.o.background = "dark" -- or dark or light
