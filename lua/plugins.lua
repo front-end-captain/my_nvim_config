@@ -16,7 +16,7 @@ packer.startup({
     -- file explorer
     use({
       "kyazdani42/nvim-tree.lua",
-      commit = "ce5d0a6b7ddfec622554943d2ebcc739b1d74567",
+      -- commit = "ce5d0a6b7ddfec622554943d2ebcc739b1d74567",
       requires = "kyazdani42/nvim-web-devicons",
     })
 
@@ -122,12 +122,6 @@ packer.startup({
 
   config = {
     max_jobs = 16,
-    git = {
-      default_url_format = "https://hub.fastgit.xyz/%s",
-      -- default_url_format = "https://mirror.ghproxy.com/https://github.com/%s",
-      -- default_url_format = "https://gitcode.net/mirrors/%s",
-      -- default_url_format = "https://gitclone.com/github.com/%s",
-    },
     display = {
       open_fn = function()
         return require("packer.util").float({ border = "single" })
