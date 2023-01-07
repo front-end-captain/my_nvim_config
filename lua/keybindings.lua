@@ -93,9 +93,10 @@ map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 
 -- Telescope
 -- find file
-map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+map("n", "<C-f>", ":Telescope find_files<CR>", opt)
 -- global search
-map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+map("n", "<C-g>", ":Telescope live_grep<CR>", opt)
+map("n", "<C-r>", ":Telescope resume<CR>", opt)
 pluginKeys.telescopeList = {
 	i = {
 		["<C-j>"] = "move_selection_next",
