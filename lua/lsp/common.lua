@@ -118,6 +118,12 @@ end
 
 vim.lsp.handlers["$/progress"] = function(_, result, ctx)
   local client_id = ctx.client_id
+  local client_name = vim.lsp.get_client_by_id(client_id).name;
+
+  if client_name == "null-ls" then
+    return;
+    
+  end
 
   local val = result.value
 
@@ -131,7 +137,7 @@ vim.lsp.handlers["$/progress"] = function(_, result, ctx)
     local message = format_message(val.message, val.percentage)
 
     notif_data.notification = notify(message, "info", {
-      title = format_title(val.title, vim.lsp.get_client_by_id(client_id).name),
+      title = format_title(val.title, client_name),
       icon = spinner_frames[1],
       timeout = false,
       hide_from_history = false,
