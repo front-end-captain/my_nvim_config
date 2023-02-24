@@ -97,6 +97,7 @@ map("n", "<C-f>", ":Telescope find_files<CR>", opt)
 -- global search
 map("n", "<C-g>", ":Telescope live_grep<CR>", opt)
 -- map("n", "<C-r>", ":Telescope resume<CR>", opt)
+-- map("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", opt)
 pluginKeys.telescopeList = {
 	i = {
 		["<C-j>"] = "move_selection_next",

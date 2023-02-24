@@ -33,3 +33,4 @@ telescope.setup({
 
 pcall(telescope.load_extension, "env")
 pcall(telescope.load_extension, "notify")
+--pcall(telescope.load_extension, "live_grep_args")

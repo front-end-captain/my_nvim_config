@@ -17,6 +17,7 @@ packer.startup({
     use({
       "kyazdani42/nvim-tree.lua",
       -- commit = "ce5d0a6b7ddfec622554943d2ebcc739b1d74567",
+      commit = "3ce0a8e770f70a135ef969e0a640bd8d05baf42c",
       requires = "kyazdani42/nvim-web-devicons",
     })
 
@@ -33,6 +34,7 @@ packer.startup({
     -- finder
     use({
       "nvim-telescope/telescope.nvim",
+      -- requires = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-live-grep-args.nvim" },
       requires = { "nvim-lua/plenary.nvim" },
     })
     use("LinArcX/telescope-env.nvim")
@@ -57,8 +59,8 @@ packer.startup({
     })
 
     -- lspconfig
-    use({ "williamboman/nvim-lsp-installer" })
-    use({ "neovim/nvim-lspconfig" })
+    use({ "williamboman/nvim-lsp-installer", commit = "17e0bfa5f2c8854d1636fcd036dc8284db136baa" })
+    use({ "neovim/nvim-lspconfig", commit = "7b98aadc6e85db4fc3af6c1ec22c4774d965506e" })
     use("onsails/lspkind-nvim")
     -- a winbar show current code context
     use({

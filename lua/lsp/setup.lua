@@ -17,6 +17,7 @@ local servers = {
   eslint = require("lsp.config.eslint"),
   gopls = require("lsp.config.golang"),
   pyright = require("lsp.config.python"),
+  stylelint_lsp = require("lsp.config.stylelint")
 }
 -- auto install Language Servers
 for name, _ in pairs(servers) do
