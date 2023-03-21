@@ -125,7 +125,6 @@ map("n", "zz", ":foldclose<CR>", opt)
 map("n", "Z", ":foldopen<CR>", opt)
 
 -- nvim-tree
--- alt + m 键打开关闭tree
 map("n", "<leader>e", ":NvimTreeToggle<CR>", opt)
 map("n", "<leader>d", ":NvimTreeFocus<CR>", opt)
 map("n", "<leader>H", ":NvimTreeResize +10<CR>", opt)

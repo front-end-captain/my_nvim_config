@@ -8,6 +8,24 @@ end
 -- kep map for nvim-tree
 local list_keys = require("keybindings").nvimTreeList
 
+local function open_nvim_tree(data)
+
+  -- buffer is a directory
+  local directory = vim.fn.isdirectory(data.file) == 1
+
+  if not directory then
+    return
+  end
+
+  -- change to the directory
+  vim.cmd.cd(data.file)
+
+  -- open the tree
+  require("nvim-tree.api").tree.open()
+end
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+
 -- https://github.com/kyazdani42/nvim-tree.lua
 nvim_tree.setup({
 	git = {
@@ -56,7 +74,7 @@ nvim_tree.setup({
 	},
 	-- npm install -g wsl-open
 	-- https://github.com/4U6U57/wsl-open/
-	system_open = {
-		cmd = "wsl-open",
-	},
+	-- system_open = {
+	-- 	cmd = "wsl-open",
+	-- },
 })

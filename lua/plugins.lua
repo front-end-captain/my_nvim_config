@@ -8,17 +8,15 @@ packer.startup({
     use("rcarriga/nvim-notify")
 
     -- color theme
-    -- gruvbox
-    use({ "ellisonleao/gruvbox.nvim", requires = { "rktjmp/lush.nvim" } })
+    use({ "luisiacc/gruvbox-baby" })
+    use({ "folke/tokyonight.nvim" })
     -- Remove all background colors to make nvim transparent
     use("xiyaowong/nvim-transparent")
 
     -- file explorer
     use({
-      "kyazdani42/nvim-tree.lua",
-      -- commit = "ce5d0a6b7ddfec622554943d2ebcc739b1d74567",
-      commit = "3ce0a8e770f70a135ef969e0a640bd8d05baf42c",
-      requires = "kyazdani42/nvim-web-devicons",
+      "nvim-tree/nvim-tree.lua",
+      requires = "nvim-tree/nvim-web-devicons",
     })
 
     -- buffer line(with tabpage integration)
@@ -52,9 +50,7 @@ packer.startup({
     -- git integration for buffers
     use({
       "lewis6991/gitsigns.nvim",
-      requires = {
-        "nvim-lua/plenary.nvim",
-      },
+      -- requires = { "nvim-lua/plenary.nvim" },
       tag = "release",
     })
 
