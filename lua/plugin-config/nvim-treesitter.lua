@@ -7,7 +7,7 @@ end
 
 -- https://github.com/nvim-treesitter/nvim-treesitter
 nvim_treesitter.setup({
-	ensure_installed = { "html", "css", "vim", "lua", "javascript", "typescript", "tsx", "astro" },
+	ensure_installed = { "html", "css", "vim", "lua", "javascript", "typescript", "tsx", "astro", "rust" },
 	highlight = {
 		enable = true,
 		-- additional_vim_regex_highlighting = false

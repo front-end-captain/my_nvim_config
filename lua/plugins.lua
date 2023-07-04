@@ -17,6 +17,7 @@ packer.startup({
     use({
       "nvim-tree/nvim-tree.lua",
       requires = "nvim-tree/nvim-web-devicons",
+      commit = "b1e074d2b52d45c8327b5b43a498b3d7e6c93b97"
     })
 
     -- buffer line(with tabpage integration)
@@ -34,6 +35,7 @@ packer.startup({
       "nvim-telescope/telescope.nvim",
       -- requires = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-live-grep-args.nvim" },
       requires = { "nvim-lua/plenary.nvim" },
+      commit = "40c31fdde93bcd85aeb3447bb3e2a3208395a868",
     })
     use("LinArcX/telescope-env.nvim")
 
@@ -115,7 +117,15 @@ packer.startup({
     -- color highlighter
     use("NvChad/nvim-colorizer.lua")
 
-    use({ "xiyaowong/virtcolumn.nvim" })
+    -- Display a character as the colorcolumn.
+    use("xiyaowong/virtcolumn.nvim")
+
+    -- persist and toggle multiple terminals during an editing session.
+    -- use("akinsho/toggleterm.nvim")
+    -- use("numToStr/FTerm.nvim")
+
+    -- Rust 增强
+    use("simrat39/rust-tools.nvim")
   end,
 
   config = {

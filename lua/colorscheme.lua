@@ -1,12 +1,12 @@
--- local colorscheme = "gruvbox-baby"
+local colorscheme = "gruvbox-baby"
 -- local colorscheme = "tokyonight"
 -- local colorscheme = "tokyonight-night"
 -- local colorscheme = "tokyonight-storm"
-local colorscheme = "tokyonight-day"
+-- local colorscheme = "tokyonight-day"
 -- local colorscheme = "tokyonight-moon"
 
-vim.o.background = "light" -- or dark or light
--- vim.o.background = "dark" -- or dark or light
+-- vim.o.background = "light" -- or dark or light
+vim.o.background = "dark" -- or dark or light
 vim.o.termguicolors = true
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 

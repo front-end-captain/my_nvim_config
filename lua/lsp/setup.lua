@@ -19,7 +19,8 @@ local servers = {
   pyright = require("lsp.config.python"),
   stylelint_lsp = require("lsp.config.stylelint"),
   jdtls = require("lsp.config.java"),
-  astro = require("lsp.config.astro")
+  astro = require("lsp.config.astro"),
+  rust_analyzer = require("lsp.config.rust")
 }
 -- auto install Language Servers
 for name, _ in pairs(servers) do
